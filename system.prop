@@ -10,6 +10,12 @@ debug.sf.enable_hwc_vds=1
 
 # Log
 persist.log.tag.OpenGLRenderer=S
+persist.log.tag.CVP=S
+persist.log.tag.CamX=S
+persist.log.tag.SYNX-UMD=S
+persist.log.tag.CHIUSECASE=S
+persist.log.tag.ResourcesCompat=S
+persist.log.tag.FastChargingPreferenceController=S
 
 # IMS
 persist.dbg.volte_avail_ovr=1
