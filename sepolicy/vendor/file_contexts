@@ -27,6 +27,9 @@
 # Fastcharge HAL
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.fastcharge@[0-9]\.[0-9]-service\.xiaomi_sm8350          u:object_r:hal_lineage_fastcharge_default_exec:s0
 
+# FPS info
+/sys/class/drm/card0/sde-crtc-0/measured_fps                         u:object_r:vendor_sysfs_graphics:s0
+
 # IR
 /dev/ir_spi                                      u:object_r:ir_spi_device:s0
 
