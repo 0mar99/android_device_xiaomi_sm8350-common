@@ -319,4 +319,7 @@
          manager will disable alpha trasformation in animations where not
          strictly needed. -->
     <bool name="config_sf_limitedAlpha">true</bool>
+ 
+    <!-- LiveDisplay -->
+    <bool name="config_enableLiveDisplay">false</bool>
 </resources>
