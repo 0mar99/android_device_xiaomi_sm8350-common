@@ -16,6 +16,7 @@ persist.log.tag.SYNX-UMD=S
 persist.log.tag.CHIUSECASE=S
 persist.log.tag.ResourcesCompat=S
 persist.log.tag.FastChargingPreferenceController=S
+persist.log.tag.ACDB-LOADER=S
 
 # IMS
 persist.dbg.volte_avail_ovr=1
