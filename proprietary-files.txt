@@ -722,6 +722,10 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so
 # Soter service (Tencent)
 vendor/app/SoterService/SoterService.apk
 
+# Spatial Audio
+vendor/lib/soundfx/libspatialaudio.so
+vendor/lib64/soundfx/libspatialaudio.so
+
 # Thermal
 vendor/bin/mi_thermald
 vendor/lib64/libthermalclient.so

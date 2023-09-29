@@ -266,6 +266,12 @@ persist.vendor.sensors.allow_non_default_discovery=true
 persist.vendor.sensors.on_change_sample_period=true
 persist.vendor.sensors.sync_request=true
 
+# Spatial Audio
+ro.audio.spatializer_enabled=true
+ro.audio.spatializer_transaural_enabled_default=false
+persist.vendor.audio.spatializer.speaker_enabled=true
+ro.vendor.audio.feature.spatial=7
+
 # Storage
 ro.incremental.enable=yes
 

@@ -295,4 +295,8 @@
          manually by the user. Off by default, since the expected haptic feedback may not be
          available on some devices. -->
     <bool name="config_enableHapticTextHandle">true</bool>
+
+     <!-- The default value for whether head tracking for
+         spatial audio is enabled for a newly connected audio device -->
+    <bool name="config_spatial_audio_head_tracking_enabled_default">true</bool>
 </resources>
