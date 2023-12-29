@@ -7,12 +7,6 @@ persist.wa.log.level               u:object_r:vendor_camera_prop:s0
 persist.sys.camlog.system.af       u:object_r:vendor_camera_prop:s0
 MACE_CPP_MIN_VLOG_LEVEL            u:object_r:vendor_camera_prop:s0
 
-# Dolby Properties
-ro.vendor.dolby.dax.version            u:object_r:exported_system_prop:s0
-ro.vendor.audio.dolby.dax.support      u:object_r:exported_system_prop:s0
-ro.vendor.audio.dolby.dax.version      u:object_r:exported_system_prop:s0
-ro.vendor.audio.dolby.surround.enable  u:object_r:exported_system_prop:s0
-
 # Global
 ro.product.marketname    u:object_r:build_prop:s0
 ro.product.mod_device    u:object_r:build_prop:s0
