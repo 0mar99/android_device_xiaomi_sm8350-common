@@ -182,7 +182,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     dalvik.vm.image-dex2oat-threads=8
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.surface_flinger.supports_background_blur=1 \
     ro.sf.blurs_are_expensive=1
 
 # DRM
