@@ -10,7 +10,7 @@ persist.vendor.cne.feature=1
 
 # Graphics
 debug.sf.disable_backpressure=1
-debug.sf.enable_hwc_vds=1
+debug.sf.enable_hwc_vds=0
 
 # Fling velocities
 ro.min.fling_velocity=70
