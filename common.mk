@@ -200,11 +200,6 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.audio.dolby.dax.support=true \
     ro.vendor.audio.dolby.surround.enable=true
 
-# Dolby Permissions
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/dolby/permissions/privapp-com.dolby.daxappui.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-com.dolby.daxappui.xml \
-    $(LOCAL_PATH)/dolby/permissions/privapp-com.dolby.daxservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-com.dolby.daxservice.xml
-
 # Dolby MediaCodecs Loading Support (Overwrites Vendor files)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/dolby/media/media_codecs_dolby_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_dolby_audio.xml
