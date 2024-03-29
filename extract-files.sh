@@ -68,10 +68,6 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        system_ext/lib64/libwfdnative.so)
-            [ "$2" = "" ] && return 0
-            "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
-            ;;
         vendor/etc/media_lahaina/video_system_specs.json \
         |vendor/etc/media_shima_v1/video_system_specs.json \
         |vendor/etc/media_yupik_v1/video_system_specs.json)
