@@ -30,6 +30,7 @@ persist.log.tag.TrafficStats=S
 persist.log.tag.ContrastColorUtil=S
 persist.log.tag.OpenGLRenderer=S
 persist.log.tag.ultrasound_extn=S
+persist.log.tag.minksocket=S
 
 # IMS
 persist.dbg.volte_avail_ovr=1
