@@ -18,6 +18,9 @@ vendor/lib64/soundfx/libqcbassboost.so
 vendor/lib64/soundfx/libqcreverb.so
 vendor/lib64/soundfx/libqcvirt.so
 
+# Audio FX modules - from cheetah AP1A.240405.002.B1
+vendor/lib/soundfx/libspatialaudio.so|f6b3bfb39ef6ad709494d016f28fd057d79b6085
+
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
@@ -733,10 +736,6 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so
 
 # Soter service (Tencent)
 vendor/app/SoterService/SoterService.apk
-
-# Spatial Audio
-vendor/lib/soundfx/libspatialaudio.so
-vendor/lib64/soundfx/libspatialaudio.so
 
 # Thermal
 vendor/bin/mi_thermald
