@@ -212,23 +212,25 @@
     },
     {
       "Name": "GPUMaxFreq",
-      "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/max_freq",
+      "Path": "/sys/class/kgsl/kgsl-3d0/max_clock_mhz",
       "Values": [
-        "840000000",
-        "540000000",
-        "443000000"
+        "840",
+        "540",
+        "443"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
     },
     {
       "Name": "GPUMinFreq",
-      "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/min_freq",
+      "Path": "/sys/class/kgsl/kgsl-3d0/min_clock_mhz",
       "Values": [
-        "540000000",
-        "379000000",
-        "315000000"
+        "540",
+        "443",
+        "379",
+        "315"
       ],
+      "DefaultIndex": 3,
       "ResetOnInit": true
     },
     {
@@ -361,7 +363,7 @@
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "GPUMaxFreq",
       "Duration": 0,
-      "Value": "540000000"
+      "Value": "540"
     },
     {
       "PowerHint": "INTERACTION",
@@ -571,7 +573,7 @@
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUMinFreq",
       "Duration": 0,
-      "Value": "540000000"
+      "Value": "540"
     },
     {
       "PowerHint": "DISPLAY_UPDATE_IMMINENT",
@@ -598,6 +600,18 @@
       "Value": "1555200"
     },
     {
+      "PowerHint": "DISPLAY_INACTIVE",
+      "Node": "UclampTAMin",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "DISPLAY_INACTIVE",
+      "Node": "CPULittleClusterMinFreq",
+      "Duration": 0,
+      "Value": "403200"
+    },
+    {
       "PowerHint": "LOW_POWER",
       "Node": "CPUBigPlusOnline",
       "Duration": 0,
@@ -619,7 +633,7 @@
       "PowerHint": "LOW_POWER",
       "Node": "GPUMaxFreq",
       "Duration": 0,
-      "Value": "443000000"
+      "Value": "443"
     }
   ]
 }
