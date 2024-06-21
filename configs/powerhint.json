@@ -582,18 +582,6 @@
       "Value": "1"
     },
     {
-      "PowerHint": "DISPLAY_INACTIVE",
-      "Node": "UclampTAMin",
-      "Duration": 0,
-      "Value": "0"
-    },
-    {
-      "PowerHint": "DISPLAY_INACTIVE",
-      "Node": "CPULittleClusterMinFreq",
-      "Duration": 0,
-      "Value": "403200"
-    },
-    {
       "PowerHint": "LOW_POWER",
       "Node": "CPUBigPlusOnline",
       "Duration": 0,
