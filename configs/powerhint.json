@@ -217,6 +217,7 @@
       "Path": "/sys/class/kgsl/kgsl-3d0/max_clock_mhz",
       "Values": [
         "840",
+        "676",
         "540",
         "443"
       ],
@@ -227,12 +228,14 @@
       "Name": "GPUMinFreq",
       "Path": "/sys/class/kgsl/kgsl-3d0/min_clock_mhz",
       "Values": [
+        "840",
+        "608",
         "540",
         "443",
         "379",
         "315"
       ],
-      "DefaultIndex": 3,
+      "DefaultIndex": 5,
       "ResetOnInit": true
     },
     {
@@ -567,7 +570,7 @@
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUMinFreq",
       "Duration": 0,
-      "Value": "540"
+      "Value": "840"
     },
     {
       "PowerHint": "LOW_POWER",
