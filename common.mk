@@ -432,7 +432,8 @@ PRODUCT_PACKAGES += \
     libcodec2_soft_common.vendor \
     libcodec2_vndk.vendor \
     libsfplugin_ccodec_utils.vendor \
-    libstagefright_softomx.vendor
+    libstagefright_softomx.vendor \
+    libcodec2_hidl_shim.vendor
 
 # Native libraries whitelist
 PRODUCT_COPY_FILES += \

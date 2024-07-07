@@ -184,8 +184,6 @@ vendor/lib/c2.dolby.hevc.dec.so
 vendor/lib/c2.dolby.hevc.enc.so
 vendor/lib/c2.dolby.hevc.sec.dec.so
 vendor/lib/c2.dolby.store.so
-vendor/lib/libcodec2_vndk.so:vendor/lib/libcodec2_vndk_vendor.so
-vendor/lib/libcodec2_hidl@1.0.so:vendor/lib/libcodec2_hidl@1.0_vendor.so
 vendor/lib/libdolbyottcameracontrol.so
 vendor/lib/libdolbyvision.so
 vendor/lib64/c2.dolby.avc.dec.so
