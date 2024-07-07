@@ -77,19 +77,11 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             sed -i "/max_retry_alloc_output_timeout/ s/10000/0/" "${2}"
             ;;
+        vendor/lib/c2.dolby.client.so)
+            "${PATCHELF}" --add-needed "libcodec2_hidl_shim.so" "${2}"
+            ;;
         vendor/lib/libstagefright_soft_ac4dec.so | vendor/lib/libstagefright_soft_ddpdec.so | vendor/lib/libstagefrightdolby.so | vendor/lib64/libdlbdsservice.so | vendor/lib64/libstagefright_soft_ac4dec.so | vendor/lib64/libstagefright_soft_ddpdec.so | vendor/lib64/libstagefrightdolby.so)
             grep -q "libstagefright_foundation-v33.so" "${2}" || "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
-            ;;
-        vendor/lib/libcodec2_hidl@1.0_vendor.so)
-            "${PATCHELF}" --set-soname "libcodec2_hidl@1.0_vendor.so" "${2}"
-            "${PATCHELF}" --replace-needed "libcodec2_vndk.so" "libcodec2_vndk_vendor.so" "${2}"
-            ;;
-        vendor/lib/libcodec2_vndk_vendor.so)
-            "${PATCHELF}" --set-soname "libcodec2_vndk_vendor.so" "${2}"
-            ;;
-        vendor/lib/c2.dolby.client.so)
-            "${PATCHELF}" --replace-needed "libcodec2_vndk.so" "libcodec2_vndk_vendor.so" "${2}"
-            "${PATCHELF}" --replace-needed "libcodec2_hidl@1.0.so" "libcodec2_hidl@1.0_vendor.so" "${2}"
             ;;
         vendor/etc/vintf/manifest/c2_manifest_vendor.xml)
             [ "$2" = "" ] && return 0
