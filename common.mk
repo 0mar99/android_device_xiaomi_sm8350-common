@@ -179,6 +179,10 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.3.vendor \
     android.hardware.drm-service.clearkey
 
+# Dolby
+PRODUCT_PACKAGES += \
+    XiaomiDolby
+
 # Dolby Config File
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/dolby/config/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml
