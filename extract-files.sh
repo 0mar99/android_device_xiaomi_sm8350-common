@@ -68,6 +68,9 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        vendor/bin/hw/dolbycodec2)
+            "${PATCHELF}" --add-needed "libstagefright_foundation-v33.so" "${2}"
+            ;;
         vendor/etc/media_lahaina/video_system_specs.json \
         |vendor/etc/media_shima_v1/video_system_specs.json \
         |vendor/etc/media_yupik_v1/video_system_specs.json)
@@ -77,10 +80,20 @@ function blob_fixup() {
         vendor/lib/libstagefright_soft_ac4dec.so | vendor/lib/libstagefright_soft_ddpdec.so | vendor/lib/libstagefrightdolby.so | vendor/lib64/libdlbdsservice.so | vendor/lib64/libstagefright_soft_ac4dec.so | vendor/lib64/libstagefright_soft_ddpdec.so | vendor/lib64/libstagefrightdolby.so)
             grep -q "libstagefright_foundation-v33.so" "${2}" || "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
             ;;
+        vendor/lib/libcodec2_hidl@1.0_vendor.so)
+            "${PATCHELF}" --set-soname "libcodec2_hidl@1.0_vendor.so" "${2}"
+            "${PATCHELF}" --replace-needed "libcodec2_vndk.so" "libcodec2_vndk_vendor.so" "${2}"
+            ;;
+        vendor/lib/libcodec2_vndk_vendor.so)
+            "${PATCHELF}" --set-soname "libcodec2_vndk_vendor.so" "${2}"
+            ;;
+        vendor/lib/c2.dolby.client.so)
+            "${PATCHELF}" --replace-needed "libcodec2_vndk.so" "libcodec2_vndk_vendor.so" "${2}"
+            "${PATCHELF}" --replace-needed "libcodec2_hidl@1.0.so" "libcodec2_hidl@1.0_vendor.so" "${2}"
+            ;;
         vendor/etc/vintf/manifest/c2_manifest_vendor.xml)
             [ "$2" = "" ] && return 0
             sed -ni '/ozoaudio/!p' "${2}"
-            sed -ni '/dolby/!p' "${2}"
             ;;
         vendor/lib64/android.hardware.secure_element@1.0-impl.so)
             [ "$2" = "" ] && return 0
