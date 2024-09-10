@@ -77,6 +77,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             sed -i "/max_retry_alloc_output_timeout/ s/10000/0/" "${2}"
             ;;
+        vendor/etc/seccomp_policy/atfwd@2.0.policy)
+            [ "$2" = "" ] && return 0
+            echo 'gettid: 1' >> ${2}
+            ;;
         vendor/lib/c2.dolby.client.so)
             "${PATCHELF}" --add-needed "libcodec2_hidl_shim.so" "${2}"
             ;;
